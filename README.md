@@ -140,7 +140,7 @@ Training parameters:
 
 - Validation split:
   - 10%
-  - - Learning rate:
+ - Learning rate:
   - 0.001
 - Weight initialization:
   - ALL_RANDOM
@@ -181,7 +181,7 @@ Inference parameters:
   - 256 × 256 pixels
 - Padding:
   - 32 pixels
-- - Batch size:
+ - Batch size:
   - 4
 The output was a georeferenced semantic segmentation raster containing six land-cover classes.
 
@@ -207,23 +207,20 @@ Evaluation Metrics:
 8. Mean Intersection over Union (mIoU)
 # Results
 The trained U-Net–ResNet34 model achieved:
-
 - Overall Accuracy:
-  - 90.46%
-
+- 90.46%
 - Kappa Coefficient:
-  - 0.8834
-
+- 0.8834
+- Macro-F1:
+- 85.92%
+- Mean Intersection over Union (mIoU):
+- 77.94%
 The model successfully generated pixel-level classification maps for mangrove and surrounding land-cover classes.
-
 # Repository Structure
-
-
 ## Software
 - ArcGIS Pro Deep Learning
 - Python
 - Deep learning libraries
-
 ## Usage
 1. Prepare image-mask pairs
 2. Train U-Net model
