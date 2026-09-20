@@ -1,12 +1,8 @@
 #Assessing RGB-only UAV Semantic Segmentation for Coastal Land-Cover Mapping: Limits of Mangrove Discrimination in Kuala Selangor, Malaysia
-Drone-based mangrove mapping using U-Net with ResNet34 encoder for semantic segmentation
-# Drone-Based Mangrove Mapping Using U-Net–ResNet34
-A deep learning framework for high-resolution drone-based mangrove mapping using U-Net with a ResNet34 encoder for semantic segmentation and land-cover classification.
 ## Overview
-This repository contains the supporting materials for the study:
-
-**"Mangrove forest mapping and classification using drone imagery and U-Net deep learning model"**
-The study presents a deep learning approach for pixel-level classification of mangrove ecosystems using high-resolution drone imagery. A U-Net semantic segmentation model with a ResNet34 encoder was developed using the ArcGIS Pro Deep Learning Framework.
+# Assessing RGB-only UAV Semantic Segmentation for Coastal Land-Cover Mapping: Limits of Mangrove Discrimination in Kuala Selangor, Malaysia
+This repository contains the supporting materials for the study.
+The study presents a deep learning framework for pixel-level coastal land-cover mapping using high-resolution UAV imagery. A U-Net semantic segmentation model with a ResNet34 encoder was developed using the ArcGIS Pro Deep Learning Framework to classify mangrove and surrounding land-cover categories.
 
 The workflow includes:
 - Drone image preprocessing
@@ -148,10 +144,13 @@ Training parameters:
   - 0.001
 - Weight initialization:
   - ALL_RANDOM
+
 - Data augmentation:
   - Default
-- Loss function:
+
+- Loss Function:
   - Dice Loss
+
 - Monitoring metric:
   - Validation Loss
 # Deep Learning Environment
