@@ -24,11 +24,14 @@ The input dataset consists of a high-resolution drone orthomosaic raster.
 Dataset characteristics:
 - File format: GeoTIFF (.tif)
 - Raster type: Drone orthomosaic imagery
-- Spectral bands:
-  - Band 1: Blue
-  - Band 2: Green
-  - Band 3: Red
-  - Band 4: Near Infrared (NIR)
+- Original UAV imagery contained four spectral bands:
+
+- Band 1: Blue
+- Band 2: Green
+- Band 3: Red
+- Band 4: Near Infrared (NIR)
+
+Only RGB bands (Blue, Green, Red) were used as input channels for U-Net–ResNet34 semantic segmentation.
 Coordinate Reference System:
 - Projected Coordinate System:
   - WGS 1984 UTM Zone 47N
@@ -137,12 +140,14 @@ Training parameters:
   - 8
 
 - Maximum epochs:
-  - 20
+ - 25
 
 - Validation split:
   - 10%
+  - - Learning rate:
+  - 0.001
 - Weight initialization:
-  - Random initialization
+  - ALL_RANDOM
 - Data augmentation:
   - Default
 - Loss function:
@@ -151,12 +156,10 @@ Training parameters:
   - Validation Loss
 # Deep Learning Environment
 The model was developed using the ArcGIS Pro Python deep learning environment.
-
 Software:
 - ArcGIS Pro 3.6.0
 - ArcGIS Pro Deep Learning Framework
 - Image Analyst Extension
-
 Python environment:
 - Python 3.9.18
 - PyTorch
