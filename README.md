@@ -151,18 +151,20 @@ Training parameters:
   - Validation Loss
 # Deep Learning Environment
 The model was developed using the ArcGIS Pro Python deep learning environment.
+
 Software:
-- ArcGIS Pro 3.5.0
+- ArcGIS Pro 3.6.0
 - ArcGIS Pro Deep Learning Framework
 - Image Analyst Extension
+
 Python environment:
-- Python 3.9
+- Python 3.9.18
 - PyTorch
 - TorchVision
 - TorchAudio
 - CUDA Toolkit 11.8
+
 GPU-enabled deep learning libraries were used for model training and inference.
----=
 # Model Inference and Classification
 
 The trained model was applied using the ArcGIS Pro **Classify Pixels Using Deep Learning** tool.
@@ -192,16 +194,16 @@ Parameters:
   - Equalized stratified random sampling
 - Target field:
   - CLASSIFIED
-Evaluation metrics:
-- Overall Accuracy (OA)
-- Kappa Coefficient
-- Precision
-- Recall
-- F1-score
-- Intersection over Union (IoU)
-
+Evaluation Metrics:
+1. Overall Accuracy (OA)
+2. Kappa Coefficient
+3. Precision
+4. Recall
+5. F1-score (Harmonic Mean of Precision and Recall)
+6. Macro-F1 (Arithmetic Mean of the F1-scores)
+7. Intersection over Union (IoU)
+8. Mean Intersection over Union (mIoU)
 # Results
-
 The trained U-Net–ResNet34 model achieved:
 
 - Overall Accuracy:
@@ -224,4 +226,4 @@ The model successfully generated pixel-level classification maps for mangrove an
 1. Prepare image-mask pairs
 2. Train U-Net model
 3. Perform inference
-4. Evaluate accuracy using confusion matrix, OA, Kappa, Precision, Recall, F1-score, and IoU
+4. Evaluate classification accuracy using the confusion matrix and performance metrics including Overall Accuracy (OA), Kappa Coefficient, Precision, Recall, F1-score, and Intersection over Union (IoU).
