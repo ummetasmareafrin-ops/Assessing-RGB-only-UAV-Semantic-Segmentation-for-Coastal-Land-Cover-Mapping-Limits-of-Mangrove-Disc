@@ -26,19 +26,21 @@ Dataset characteristics:
 - Band 2: Green
 - Band 3: Red
 - Band 4: Near Infrared (NIR)
-
 Only RGB bands (Blue, Green, Red) were used as input channels for U-Net–ResNet34 semantic segmentation.
 Coordinate Reference System:
 - Projected Coordinate System:
-  - WGS 1984 UTM Zone 47N
+- WGS 1984 UTM Zone 47N
 - EPSG Code:
-  - 32647
+- 32647
 - Geographic Coordinate System:
-  - WGS 1984
+- WGS 1984
 - Unit:
-  - Meter
-
-The original high-resolution drone orthomosaic dataset is approximately 49.67 GB. Due to its large size, the complete dataset is not publicly uploaded.
+ - Meter
+- Spatial resolution:
+- 0.046085 m/pixel
+- Area of Interest (AOI):
+- Approximately 14.99 ha
+The original high-resolution drone orthomosaic dataset is approximately 49.67 GB. Due to its large size, the complete dataset is not publicly uploaded.  
 The dataset is available from the corresponding author upon reasonable request.
 # Land-Cover Classes
 The model classifies six land-cover categories:
@@ -62,9 +64,7 @@ The complete workflow consists of:
 6. U-Net–ResNet34 model training
 7. Pixel classification using deep learning
 8. Accuracy assessment
-
 Workflow:
-
 Drone Orthomosaic  
 → Training Polygon Annotation  
 → Label Raster Generation  
@@ -192,10 +192,21 @@ Parameters:
   - MangroveU-Net_Classification_v1.tif
 - Number of random points:
   - 500
+  - # Accuracy Assessment
+
+Model performance was evaluated using independent validation points generated in ArcGIS Pro.
+
+Parameters:
+- Input classification raster:
+- MangroveU-Net_Classification_v1.tif
+- Initial validation points:
+- 500
+- Valid validation points used:
+- 409
 - Sampling strategy:
-  - Equalized stratified random sampling
+- Equalized stratified random sampling
 - Target field:
-  - CLASSIFIED
+- CLASSIFIED
 Evaluation Metrics:
 1. Overall Accuracy (OA)
 2. Kappa Coefficient
